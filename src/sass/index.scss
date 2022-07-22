@@ -1,2 +1,14 @@
-@import './common';
-@import './example';
+@import './utils/variables';
+@import './utils/fonts';
+
+@import './base/common';
+@import './base/reset';
+
+@import './layouts/hero-header';
+@import './layouts/products';
+@import './layouts/about';
+@import './layouts/advantages';
+@import './layouts/gallery';
+@import './layouts/customer-reviews';
+@import './layouts/contacts';
+@import './layouts/footer';
