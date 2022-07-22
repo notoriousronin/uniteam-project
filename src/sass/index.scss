@@ -1,10 +1,10 @@
 @import './utils/variables';
-@import './utils/fonts';
 
 @import './base/common';
 @import './base/reset';
 
-@import './layouts/hero-header';
+@import './layouts/header';
+@import './layouts/hero';
 @import './layouts/products';
 @import './layouts/about';
 @import './layouts/advantages';
