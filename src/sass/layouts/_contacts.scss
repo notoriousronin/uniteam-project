@@ -1,0 +1,98 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contacts__sub-block {
+  padding-left: 32px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-weight: 500;
+  font-size: 12px;
+  background-color: #ffffff;
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  border-radius: 24px;
+}
+
+.contacts__category {
+  line-height: 1, 86;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  letter-spacing: 0.04em;
+
+  color: #ffffff;
+
+  &-cafe {
+    width: 80px;
+    height: 16px;
+    background: #f0d1a5;
+    border-radius: 4px;
+  }
+
+  &-foodtruck {
+    width: 130px;
+    height: 16px;
+    background: #c2e297;
+    border-radius: 4px;
+  }
+}
+
+.contacts__city-promo {
+}
+.contacts__city {
+  line-height: 1.86;
+  letter-spacing: 0.04em;
+  color: #000000;
+
+  &-text {
+    width: 179px;
+    line-height: 1.5;
+    color: #907e82;
+  }
+}
+
+.contacts__schedule {
+  line-height: 1.86;
+}
+.contacts__weekdays {
+}
+.contacts__days {
+  color: #000000;
+}
+.contacts__hours {
+  color: #ffa5ba;
+}
+.contacts__weekend {
+}
+.contacts__get-in-touch {
+  line-height: 1.5;
+  color: #907e82;
+}
+
+.contacts__buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contacts__button {
+  width: 161.45px;
+  height: 44px;
+  border-radius: 22px;
+
+  &-location {
+    background: #d41342;
+    border: transparent;
+    color: #ffffff;
+  }
+
+  &-franchise {
+    background: #ffffff;
+    border: transparent;
+    color: #d41342;
+  }
+}
