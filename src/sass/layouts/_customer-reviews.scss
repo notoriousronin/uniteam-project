@@ -2,11 +2,24 @@
   position: relative;
   padding-top: 30px;
   padding-bottom: 30px;
+  @media screen and (min-width: 768px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }
 
 .reviews .container {
   padding-left: 20px;
   padding-right: 20px;
+  @media screen and (min-width: 768px) {
+    padding-left: 74px;
+    padding-right: 74px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-left: 116px;
+    padding-right: 116px;
+  }
 }
 
 .reviews__img {
@@ -39,6 +52,16 @@
     width: 54px;
     height: 40px;
     background-image: url('../images/reviews/quotes.png');
+
+    @media screen and (min-width: 768px) {
+      top: 20px;
+      left: 6px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      top: 32px;
+      left: 72px;
+    }
   }
 
   &::after {
@@ -49,6 +72,28 @@
 
     color: #c7133e;
     font-size: 27px;
+
+    @media screen and (min-width: 768px) {
+      bottom: -14px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      bottom: -26px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 37px;
+    padding-bottom: 36px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-left: 73px;
+    padding-right: 73px;
+    padding-top: 47px;
+    padding-bottom: 31px;
   }
 }
 
@@ -58,6 +103,7 @@
   width: 100%;
   z-index: 1;
 
+  font-family: 'Dm Sans';
   font-weight: 500;
   font-size: 12px;
   line-height: 2.55;
@@ -70,16 +116,44 @@
     #e1e1e1 29px,
     #e1e1e1 30px
   );
+
+  @media screen and (min-width: 768px) {
+    padding: 0 47px;
+
+    font-size: 14px;
+    line-height: 2.16;
+    letter-spacing: 0.04em;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+    line-height: 1.86;
+
+    padding: 0 35px;
+  }
 }
 
 .reviews__name {
   margin-bottom: 16px;
 
+  font-family: 'DM Sans';
   font-weight: 500;
   font-size: 14px;
   line-height: 1.86;
   text-align: center;
   color: $mainTextColor;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 32px;
+
+    font-size: 16px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 32px;
+
+    font-size: 20px;
+  }
 }
 
 .reviews__button-right {
