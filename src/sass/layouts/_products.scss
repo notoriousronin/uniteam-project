@@ -1,7 +1,7 @@
 .products {
   text-align: center;
 }
-.products__suptitle {
+.products__pretitle {
   margin-bottom: 15px;
   font-family: 'Titan One';
   font-style: normal;
@@ -94,7 +94,7 @@
 
     transform: translateX(-50%);
     display: block;
-    background-image: url(/src/images/products-img/ice-mob-1x.jpg);
+    background-image: url(../images/products-img/ice-mob-1x.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -102,11 +102,11 @@
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
-      background-image: url(/src/images/products-img/ice-mob-2x.jpg);
+      background-image: url(../images/products-img/ice-mob-2x.jpg);
     }
 
     @media screen and (min-width: 768px) {
-      background-image: url(/src/images/products-img/ice-tab-1x.jpg);
+      background-image: url(../images/products-img/ice-tab-1x.jpg);
       width: 224px;
       height: 224px;
       left: 0;
@@ -115,11 +115,11 @@
       @media screen and (min-device-pixel-ratio: 2),
         screen and (min-resolution: 192dpi),
         screen and (min-resolution: 2dppx) {
-        background-image: url(/src/images/products-img/ice-tab-2x.jpg);
+        background-image: url(../images/products-img/ice-tab-2x.jpg);
       }
 
       @media screen and (min-width: 1200px) {
-        background-image: url(/src/images/products-img/ice-desk-1x.jpg);
+        background-image: url(../images/products-img/ice-desk-1x.jpg);
 
         top: -40%;
         left: 0;
@@ -129,7 +129,7 @@
         @media screen and (min-device-pixel-ratio: 2),
           screen and (min-resolution: 192dpi),
           screen and (min-resolution: 2dppx) {
-          background-image: url(/src/images/products-img/ice-desk-2x.jpg);
+          background-image: url(../images/products-img/ice-desk-2x.jpg);
         }
       }
     }
@@ -147,7 +147,7 @@
 
     transform: translateX(-50%);
     display: block;
-    background-image: url(/src/images/products-img/coffee-mob-1x.jpg);
+    background-image: url(../images/products-img/coffee-mob-1x.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -156,11 +156,11 @@
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
-      background-image: url(/src/images/products-img/coffee-mob-2x.jpg);
+      background-image: url(../images/products-img/coffee-mob-2x.jpg);
     }
 
     @media screen and (min-width: 768px) {
-      background-image: url(/src/images/products-img/coffee-tab-1x.jpg);
+      background-image: url(../images/products-img/coffee-tab-1x.jpg);
       width: 224px;
       height: 224px;
       left: 0;
@@ -169,11 +169,11 @@
       @media screen and (min-device-pixel-ratio: 2),
         screen and (min-resolution: 192dpi),
         screen and (min-resolution: 2dppx) {
-        background-image: url(/src/images/products-img/coffee-tab-2x.jpg);
+        background-image: url(../images/products-img/coffee-tab-2x.jpg);
       }
 
       @media screen and (min-width: 1200px) {
-        background-image: url(/src/images/products-img/coffee-desk-1x.jpg);
+        background-image: url(../images/products-img/coffee-desk-1x.jpg);
 
         top: -40%;
         left: 0;
@@ -183,7 +183,7 @@
         @media screen and (min-device-pixel-ratio: 2),
           screen and (min-resolution: 192dpi),
           screen and (min-resolution: 2dppx) {
-          background-image: url(/src/images/products-img/coffee-desk-2x.jpg);
+          background-image: url(../images/products-img/coffee-desk-2x.jpg);
         }
       }
     }
@@ -201,7 +201,7 @@
 
     transform: translateX(-50%);
     display: block;
-    background-image: url(/src/images/products-img/milkshake-mob-1x.jpg);
+    background-image: url(../images/products-img/milkshake-mob-1x.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -210,10 +210,10 @@
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
-      background-image: url(/src/images/products-img/milkshake-mob-2x.jpg);
+      background-image: url(../images/products-img/milkshake-mob-2x.jpg);
     }
     @media screen and (min-width: 768px) {
-      background-image: url(/src/images/products-img/milkshake-tab-1x.jpg);
+      background-image: url(../images/products-img/milkshake-tab-1x.jpg);
       width: 224px;
       height: 224px;
       left: 0;
@@ -222,11 +222,11 @@
       @media screen and (min-device-pixel-ratio: 2),
         screen and (min-resolution: 192dpi),
         screen and (min-resolution: 2dppx) {
-        background-image: url(/src/images/products-img/milkshake-tab-2x.jpg);
+        background-image: url(../images/products-img/milkshake-tab-2x.jpg);
       }
 
       @media screen and (min-width: 1200px) {
-        background-image: url(/src/images/products-img/milkshake-desk-1x.jpg);
+        background-image: url(../images/products-img/milkshake-desk-1x.jpg);
 
         top: -40%;
         left: 0;
@@ -236,7 +236,7 @@
         @media screen and (min-device-pixel-ratio: 2),
           screen and (min-resolution: 192dpi),
           screen and (min-resolution: 2dppx) {
-          background-image: url(/src/images/products-img/milkshake-desk-2x.jpg);
+          background-image: url(../images/products-img/milkshake-desk-2x.jpg);
         }
       }
     }
@@ -279,7 +279,7 @@
     display: block;
     width: 26px;
     height: 6px;
-    background-image: url(/src/images/products-img/Group\ 4.png);
+    background-image: url(../images/products-img/Group\ 4.png);
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -345,7 +345,7 @@
 }
 .about-ice {
   width: 100px;
- 
+
   color: #d41443;
   background-color: #f5d8eb;
 }
