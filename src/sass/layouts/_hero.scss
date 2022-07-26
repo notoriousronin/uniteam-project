@@ -1,0 +1,403 @@
+.hero {
+    background-color: $lightpinkColor;
+    overflow: hidden;
+    padding-bottom: 0;
+    .container {
+        position: relative;
+
+        @media screen and (max-width: 768px){
+            min-width: 100%;
+    }
+    }
+}
+
+
+.hero-img-circle {
+    left: 0;
+    top: 0;
+    position: absolute;
+    z-index: 2;
+    top: 83px;
+    left: 36px;
+    // left: 25%;
+    width: 344px;
+    height: 344px;
+    background-color: $darkpinkColor;
+    border-radius: 50%;
+    border: none;
+    
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        top: 43px;
+        bottom: 40px;
+        left: 216px;
+        width: 335px;
+        height: 333px;
+    }
+    @media screen and (min-width: 1200px) {
+        bottom: 77px;
+        left: 525px;
+        width: 534px;
+        height: 534px;
+    }
+}
+
+
+.hero-img-icecream {
+    height: 410px;
+    width: 171px;
+    z-index: 3;
+    position: absolute;
+    top: 94px;
+    // right: 5%;
+    right: 32px;
+    // left: 45%;
+    background-image: url('../images/hero/icecream-1x-mobile.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image: url('../images/hero/icecream-2x-mobile.png');}
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        top: 80px;
+        right: 270px;
+        left: 290px;
+        bottom: 0;
+        height: 336px;
+        width: 143px;
+        background-image: url('../images/hero/icecream-1x-tablet.png');
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url('../images/hero/icecream-2x-tablet.png');}
+    }
+    @media screen and (min-width: 1200px) {
+        top: 108px;
+        left: 644px;
+        height: 567px;
+        width: 236px;
+        background-image: url('../images/hero/icecream-1x-desk.png');
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url('../images/hero/icecream-2x-desk.png');}
+    }
+}
+
+.hero-img-milk {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        width: 152px;
+        height: 154px;
+        position: absolute;
+        top: 246px;
+        bottom: 16px;
+        background-image: url('../images/hero/milk-1x-tablet.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url('../images/hero/milk-2x-tablet.png');}
+    }
+    @media screen and (min-width: 1200px) {
+        width: 213px;
+        height: 216px;
+        position: absolute;
+        bottom: 60px;
+        background-size: cover;
+        background-image: url('../images/hero/milk-1x-desk.png');
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url('../images/hero/milk-2x-desk.png');}
+    }
+}
+
+.hero-img-girl {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        width: 190px;
+        height: 150px;
+        position: absolute;
+        left: 514px;
+        top: 265px;
+        z-index: 10;
+        background-image: url('../images/hero/girl-1x-tablet.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url('../images/hero/girl-2x-tablet.png');}
+    }
+    @media screen and (min-width: 1200px) {
+        width: 304px;
+        height: 241px;
+        position: absolute;
+        background-size: cover;
+        z-index: 10;
+
+        left: 880px;
+        top: 424px;
+        background-image: url('../images/hero/girl-1x-desk.png');
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url('../images/hero/girl-2x-desk.png');}
+    }
+}
+
+.hero-bg-text-box {
+    display: none;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        display: block;
+        width: 114px;
+        position: absolute;
+        left: 152px;
+        top: 287px;
+        z-index: 10;
+    }
+    @media screen and (min-width: 1200px) {
+        display: block;
+        position: absolute;
+        width: 200px;
+        left: 216px;
+        bottom: 84px;
+    }
+}
+
+.hero-bg-text {
+    font-size: 8px;
+    line-height: 1.5;
+    color: #ffffff;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 8px;
+    @media screen and (min-width: 1200px) {
+        display: block;
+        font-size: 14px;
+        line-height: 1.43;
+        margin-bottom: 20px;
+
+        color: #ffffff;
+    }
+}
+
+.hero-bg-btn {
+    display: none;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        display: block;
+    }
+    @media screen and (min-width: 1200px) {
+        display: block;
+        width: 26px;
+        height: 26px;
+    }
+    &:hover,
+    &:focus {
+        box-shadow: 2px 2px 10px 2px #d87991;
+        background-color: #ecebeb;
+    }
+}
+
+.hero-btn-logo {
+    fill: $mainTitleColor;
+    text-align: center;
+    @media screen and (min-width: 1200px) {
+        width: 10px;
+        height: 23px;
+    }
+}
+
+.hero-content {
+    padding-top: 194px;
+    padding-bottom: 158px;
+    position: relative;
+    z-index: 10;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        padding-top: 102px;
+        padding-bottom: 190px;
+        height: 416px;
+    }
+    @media screen and (min-width: 1200px) {
+        padding-top: 147px;
+        padding-bottom: 316px;
+        height: 664px;
+    }
+}
+
+.hero-title {
+    font-family: 'Titan One', Tahoma, sans-serif;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 1.15;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #ffffff;
+    max-width: 218px;
+    text-shadow: 2px 2px 5px rgb(104, 39, 48, 0.3);
+    @media screen and (max-width: 320px) {
+        font-size: 24px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        font-size: 22px;
+        line-height: 1.25;
+        max-width: 162px;
+    }
+    @media screen and (min-width: 1200px) {
+        font-size: 38px;
+        line-height: 1.18;
+        max-width: 277px;
+    }
+}
+
+.hero-title-accent {
+    font-size: 48px;
+    line-height: 0.96;
+    color: $mainTitleColor;
+    text-shadow: 2px 2px 5px rgb(104, 39, 48, 0.3);
+    @media screen and (max-width: 320px) {
+        font-size: 30px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        font-size: 34px;
+        line-height: 0.91;
+    }
+    @media screen and (min-width: 1200px) {
+        font-size: 58px;
+        line-height: 0.9;
+    }
+}
+
+.hero-numbers-list {
+    display: none;
+    @media screen and (min-width: 768px) {
+        display: block;
+    }
+}
+
+.hero-box {
+    @media screen and (min-width: 768px) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.hero-numbers-item {
+    position: relative;
+    &:not(:last-child) {
+        margin-bottom: 14px;
+    }
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: flex-end;
+        margin-right: 25px;
+    }
+}
+
+.hero-number {
+    font-family: 'Titan One';
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.14;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $mainTitleColor;
+
+    @media screen and (min-width: 1200px) {
+        font-size: 46px;
+        line-height: 1.15;
+    }
+    &::after {
+        content: '';
+        width: 16px;
+        height: 16px;
+        background-color: #ffffff;
+        border: none;
+        border-radius: 50%;
+        position: absolute;
+        left: 23px;
+        z-index: -1;
+        @media screen and (min-width: 1200px) {
+            width: 30px;
+            height: 30px;
+            left: 62px;
+        }
+    }
+}
+
+.hero-unit {
+    font-size: 8px;
+    line-height: 1.25;
+    text-align: center;
+    color: #ffffff;
+    @media screen and (min-width: 1200px) {
+        font-size: 14px;
+        line-height: 1.29;
+    }
+}
+
+.hero-btn {
+    display: flex;
+    margin-top: 20px;
+}
+
+.btn-products {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $mainTitleColor;
+    border-radius: 20px;
+    border: none;
+    height: 24px;
+    min-width: 63px;
+    font-size: 8px;
+    line-height: 1.25;
+    color: #ffffff;
+
+    @media screen and (min-width: 1200px) {
+        height: 40px;
+        min-width: 107px;
+        font-size: 14px;
+        line-height: 1.29;
+    }
+    &:hover,
+    &:focus {
+        box-shadow: 2px 2px 10px #d87991;
+        background-color: #c7133e;
+    }
+}
+
+.btn-about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 8px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    border: none;
+    height: 24px;
+    min-width: 83px;
+    font-size: 8px;
+    line-height: 1.25;
+    color: $mainTitleColor;
+
+    @media screen and (min-width: 1200px) {
+        height: 40px;
+        min-width: 138px;
+        font-size: 14px;
+        line-height: 1.29;
+        margin-left: 12px;
+    }
+    &:hover,
+    &:focus {
+        color: #7c0b27;
+        background-color: #ecebeb;
+        box-shadow: 2px 2px 10px 2px #d87991;
+    }
+}
