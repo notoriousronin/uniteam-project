@@ -1,0 +1,149 @@
+img {
+  display: block;
+  max-width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.about {
+  background-color: #fff5f6;
+  // padding: 20px;
+}
+
+.overlay {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(../images/about/about-milk-mob.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.about__container {
+  padding: 0;
+  margin: 0 auto;
+
+  // outline: 2px solid red;
+  // outline-offset: -2px;
+
+  @media screen and (min-width: 480px) {
+    max-width: 480px;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 1200px;
+  }
+}
+.about__text {
+  padding: 60px 64px 15px 54px;
+  font-family: 'Titan One';
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1, 17;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #ffa5ba;
+
+  @media screen and (min-width: 320px) {
+    font-size: 18px;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 26px;
+  }
+}
+
+.about__title {
+  margin-left: 60px;
+  margin-right: 60px;
+  font-family: 'Titan One';
+  font-weight: 400;
+  font-size: 58px;
+  line-height: 1, 15;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: #d41443;
+
+  @media screen and (min-width: 320px) {
+    font-size: 34px;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 48px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 58px;
+  }
+}
+
+.about__full-title {
+  padding: 40px 80px 40px 20px;
+  font-family: 'DM Sans';
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 162%;
+  color: #000000;
+
+  @media screen and (min-width: 320px) {
+    font-size: 12px;
+    line-height: 1, 58;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
+    line-height: 1, 79;
+  }
+}
+
+.about__paragraph {
+  padding-left: 20px;
+  padding-right: 80px;
+  font-family: 'DM Sans';
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 162%;
+
+  color: #907e82;
+  @media screen and (min-width: 320px) {
+    font-size: 12px;
+    line-height: 1, 58;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
+    line-height: 1, 79;
+  }
+}
+
+.about__button {
+  display: block;
+
+  padding: 15px 56px 15px 37px;
+
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: #ffffff;
+  border-radius: 22px;
+  border: none;
+
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+
+  color: #d41443;
+}
+
+.about__icon {
+  align-self: center;
+  margin-bottom: 14px;
+}
