@@ -57,6 +57,8 @@
 }
 }
 
+// header btn style
+
 .buy-btn {
     display: none;
     padding: 17px 35px;
@@ -65,6 +67,8 @@
     line-height: 1.31;
     color: #D41443;
     cursor: pointer;
+    // animation: reverse 2s;
+    // box-shadow: #D41443;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     background: #ffffff;
@@ -89,6 +93,17 @@
         margin-left: 12px;
 
     }
+// @keyframes buy-btn {
+//     0% {
+//         box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
+//     }
+//     70% {
+//         box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
+//     }
+//     100% {
+//         box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+//     }
+// }
 }
 
 
@@ -104,9 +119,7 @@
 
     @media screen and (min-width: 1200px) {
         display: none;
-    }
-
-
+}
 }
 
 .menu-btn__icon-open{
@@ -114,27 +127,58 @@
     height: 12px;
 }
 
+.scroll-btn{
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    padding: 17px 35px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.31;
+    color: #D41443;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: #ffffff;
+    z-index: 99;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 22px;
+
+    &:hover,
+    &:focus {
+        background-color: #ECEBEB;
+}
+}
+
 
 
 // nav-menu
-// .is-hiden{
-// opacity: 0;
-// visibility: hidden;
-// pointer-events: none;}
+.is-hidden{
+opacity: 0;
+transform: translateX(100%);
+overflow-x: hidden;
+pointer-events: none;}
+
+.no-scroll {
+    overflow-x: hidden;
+}
+
 
 .menu{
-    position: absolute;
+    position: fixed;
+    z-index: 2;
     top: 0;
     left: 0;
+    overflow-x: hidden;
+    
+    transition: 250ms;
     width: 100vw;
     height: 100vh;
     padding: 20px;
     background-color: #E17992;
-    transform: translateX(100%);
-    .menu-btn__open:hover .menu,
-    .menu-btn__open:focus .menu {
-            transform: translateX(0);
-        }
+    
+
 
 &-btn__close{
     width: 14px;
@@ -211,7 +255,6 @@
         text-align: center;
         justify-content: center;
     }
-
     &:hover,
     &:focus {
         background-color: #ECEBEB;
@@ -221,5 +264,4 @@
         width: 6px;
         height: 10px;
         margin-left: 12px;
-
-    }
+}
