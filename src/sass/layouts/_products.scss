@@ -70,7 +70,10 @@
   }
 }
 .products__item:not(:last-child) {
-  margin-bottom: 140px;
+  
+   @media screen and (max-width: 767px) {
+    margin-bottom: 140px;
+  }
 }
 
 .products__item.products__item--ice-cream {
