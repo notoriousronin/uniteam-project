@@ -1,6 +1,7 @@
 .hero {
     background-color: $lightpinkColor;
     overflow: hidden;
+    padding-bottom: 0;
     .container {
         position: relative;
 
@@ -9,6 +10,7 @@
     }
     }
 }
+
 
 .hero-img-circle {
     left: 0;
@@ -26,13 +28,14 @@
     
     @media screen and (min-width: 768px) and (max-width: 1199px) {
         top: 43px;
-        left: 248px;
+        bottom: 40px;
+        left: 216px;
         width: 335px;
         height: 333px;
     }
     @media screen and (min-width: 1200px) {
-        top: 54px;
-        left: 517px;
+        bottom: 77px;
+        left: 525px;
         width: 534px;
         height: 534px;
     }
@@ -57,7 +60,9 @@
         background-image: url('../images/hero/icecream-2x-mobile.png');}
     @media screen and (min-width: 768px) and (max-width: 1199px) {
         top: 80px;
-        right: 303px;
+        right: 270px;
+        left: 290px;
+        bottom: 0;
         height: 336px;
         width: 143px;
         background-image: url('../images/hero/icecream-1x-tablet.png');
@@ -68,7 +73,7 @@
     }
     @media screen and (min-width: 1200px) {
         top: 108px;
-        right: 408px;
+        left: 644px;
         height: 567px;
         width: 236px;
         background-image: url('../images/hero/icecream-1x-desk.png');
@@ -84,7 +89,7 @@
         width: 152px;
         height: 154px;
         position: absolute;
-        left: 32px;
+        top: 246px;
         bottom: 16px;
         background-image: url('../images/hero/milk-1x-tablet.png');
         background-size: cover;
@@ -98,8 +103,8 @@
         width: 213px;
         height: 216px;
         position: absolute;
-        left: 16px;
         bottom: 60px;
+        background-size: cover;
         background-image: url('../images/hero/milk-1x-desk.png');
         @media (min-device-pixel-ratio: 2),
         (min-resolution: 192dpi),
@@ -113,8 +118,8 @@
         width: 190px;
         height: 150px;
         position: absolute;
-        right: 32px;
-        top: 275px;
+        left: 514px;
+        top: 265px;
         z-index: 10;
         background-image: url('../images/hero/girl-1x-tablet.png');
         background-size: cover;
@@ -128,7 +133,10 @@
         width: 304px;
         height: 241px;
         position: absolute;
-        right: 16px;
+        background-size: cover;
+        z-index: 10;
+
+        left: 880px;
         top: 424px;
         background-image: url('../images/hero/girl-1x-desk.png');
         @media (min-device-pixel-ratio: 2),
@@ -144,14 +152,16 @@
         display: block;
         width: 114px;
         position: absolute;
-        left: 184px;
+        left: 152px;
         top: 287px;
         z-index: 10;
     }
     @media screen and (min-width: 1200px) {
+        display: block;
+        position: absolute;
         width: 200px;
-        left: 229px;
-        top: 456px;
+        left: 216px;
+        bottom: 84px;
     }
 }
 
@@ -162,6 +172,7 @@
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin-bottom: 8px;
     @media screen and (min-width: 1200px) {
+        display: block;
         font-size: 14px;
         line-height: 1.43;
         margin-bottom: 20px;
@@ -181,6 +192,7 @@
         display: block;
     }
     @media screen and (min-width: 1200px) {
+        display: block;
         width: 26px;
         height: 26px;
     }
@@ -191,14 +203,14 @@
     }
 }
 
-// .hero-btn-logo {
-//     fill: $color-accent;
-//     align-items: center;
-//     @media screen and (min-width: 1200px) {
-//         width: 10px;
-//         height: 23px;
-//     }
-// }
+.hero-btn-logo {
+    fill: $mainTitleColor;
+    text-align: center;
+    @media screen and (min-width: 1200px) {
+        width: 10px;
+        height: 23px;
+    }
+}
 
 .hero-content {
     padding-top: 194px;
@@ -284,6 +296,7 @@
         flex-direction: column;
         align-content: center;
         align-items: flex-end;
+        margin-right: 25px;
     }
 }
 
@@ -308,8 +321,7 @@
         border: none;
         border-radius: 50%;
         position: absolute;
-        left: 26px;
-        top: -4px;
+        left: 23px;
         z-index: -1;
         @media screen and (min-width: 1200px) {
             width: 30px;
