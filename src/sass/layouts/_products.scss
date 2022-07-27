@@ -55,23 +55,22 @@
 }
 .products__item {
   width: 280px;
-  height: 489px;
+
   border-radius: 24px;
   position: relative;
   padding: 165px 40px 40px;
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     max-width: 224px;
-    height: 100%;
+
     padding: 165px 40px 40px;
   }
   @media screen and (min-width: 1200px) {
     width: 368px;
-    height: 100%;
   }
 }
+
 .products__item:not(:last-child) {
-  
-   @media screen and (max-width: 767px) {
+  @media screen and (max-width: 767px) {
     margin-bottom: 140px;
   }
 }
@@ -86,14 +85,15 @@
   background: #c2e297;
 }
 
-.products__item--img-icecream {
+.products__item--ice-cream {
   &::before {
     position: absolute;
     content: '';
-    top: -25%;
+    top: -30%;
     left: 50%;
     width: 100%;
     height: 280px;
+    margin: 0 auto;
 
     transform: translateX(-50%);
     display: block;
@@ -110,6 +110,7 @@
 
     @media screen and (min-width: 768px) {
       background-image: url(../images/products-img/ice-tab-1x.jpg);
+      top: -23%;
       width: 224px;
       height: 224px;
       left: 0;
@@ -120,30 +121,30 @@
         screen and (min-resolution: 2dppx) {
         background-image: url(../images/products-img/ice-tab-2x.jpg);
       }
+    }
 
-      @media screen and (min-width: 1200px) {
-        background-image: url(../images/products-img/ice-desk-1x.jpg);
+    @media screen and (min-width: 1200px) {
+      background-image: url(../images/products-img/ice-desk-1x.jpg);
 
-        top: -40%;
-        left: 0;
-        width: 368px;
-        height: 394px;
+      top: -46.5%;
+      left: 0;
+      width: 368px;
+      height: 394px;
 
-        @media screen and (min-device-pixel-ratio: 2),
-          screen and (min-resolution: 192dpi),
-          screen and (min-resolution: 2dppx) {
-          background-image: url(../images/products-img/ice-desk-2x.jpg);
-        }
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+        background-image: url(../images/products-img/ice-desk-2x.jpg);
       }
     }
   }
 }
 
-.products__item--img-icecoffee {
+.products__item--coffe {
   &::before {
     position: absolute;
     content: '';
-    top: -25%;
+    top: -33%;
     left: 50%;
     width: 100%;
     height: 280px;
@@ -164,6 +165,7 @@
 
     @media screen and (min-width: 768px) {
       background-image: url(../images/products-img/coffee-tab-1x.jpg);
+      top: -23%;
       width: 224px;
       height: 224px;
       left: 0;
@@ -178,7 +180,7 @@
       @media screen and (min-width: 1200px) {
         background-image: url(../images/products-img/coffee-desk-1x.jpg);
 
-        top: -40%;
+        top: -46.5%;
         left: 0;
         width: 368px;
         height: 394px;
@@ -193,11 +195,11 @@
   }
 }
 
-.products__item--img-milkshake {
+.products__item--milkshakes {
   &::before {
     position: absolute;
     content: '';
-    top: -25%;
+    top: -33%;
     left: 50%;
     width: 100%;
     height: 280px;
@@ -217,7 +219,9 @@
     }
     @media screen and (min-width: 768px) {
       background-image: url(../images/products-img/milkshake-tab-1x.jpg);
+      top: -23%;
       width: 224px;
+
       height: 224px;
       left: 0;
       transform: translateX(0);
@@ -231,7 +235,7 @@
       @media screen and (min-width: 1200px) {
         background-image: url(../images/products-img/milkshake-desk-1x.jpg);
 
-        top: -40%;
+        top: -46.5%;
         left: 0;
         width: 368px;
         height: 394px;
@@ -257,10 +261,11 @@
   text-transform: uppercase;
   color: #ffffff;
   margin-bottom: 32px;
-  margin-top: 32px;
+
   @media screen and (min-width: 1200px) {
     font-size: 30px;
     line-height: 1.3;
+    margin-top: 32px;
   }
 }
 
@@ -275,7 +280,7 @@
   color: #ffffff;
   margin-bottom: 32px;
   &::before {
-    margin: 32px auto;
+    margin: 0 auto 32px;
     content: '';
     top: 0;
     left: 0;
@@ -304,20 +309,20 @@
   border: none;
   &:hover,
   &:focus {
-    box-shadow: 0px 1px 1px RGB(245, 255, 255), 0px 4px 4px RGB(245, 255, 255),
-      1px 4px 6px RGB(245, 255, 255);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
   }
 }
 .products_button__icon {
   fill: #d41443;
   transition: transform 250ms linear;
   .products_button:hover &,
-  .product_button:focus & {
+  .products_button:focus & {
     transform: scale(1.5) rotateZ(-90deg);
   }
 }
 
-.about-prodacts {
+.description-products {
   font-family: 'DM Sans';
   font-style: normal;
   font-weight: 700;
@@ -329,7 +334,7 @@
   position: absolute;
   top: -100px;
   width: 280px;
-
+  border-radius: 100%;
   left: 50%;
 
   transform: translate(-50%, -50%);
@@ -347,20 +352,21 @@
   }
 }
 .about-ice {
-  width: 100px;
+  border-radius: 50%;
+  width: 150px;
 
   color: #d41443;
-  background-color: #f5d8eb;
+  background-color: #ffb8ca;
 }
 
 .about-coffee {
-  width: 100px;
+  width: 150px;
   color: #d41443;
-  background-color: #e9dac5;
+  background-color: #f0d1a5;
 }
 
 .about-milkshake {
-  width: 100px;
+  width: 150px;
   color: #d41443;
-  background-color: hwb(110 75% 13%);
+  background-color: #c2e297;
 }
