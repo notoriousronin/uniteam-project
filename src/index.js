@@ -41,18 +41,18 @@
 
 
 
-// window.onscroll = function() {scrollFunction()};
 
-// function scrollFunction() {
-//     if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
-//         document.getElementById(".scroll-btn").style.display = block;
-//     } else {
-//         document.getElementById(".scroll-btn").style.display = none;
-//     }
-// }
 
-// // When the user clicks on the button, scroll to the top of the document
-// function topFunction() {
-//     document.body.scrollTop = 0; // For Safari
-//     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-// }
+$(document).scroll(function() {
+  let scrolled = $(window).scrollTop();
+  
+  if(scrolled > 350) {
+    $('.scroll-btn').addClass('active');
+  } else {
+    $('.scroll-btn').removeClass('active');
+  }
+});
+
+$('.scroll-btn').click(function() {
+    $('body,html').animate({ scrollTop: 0}, 800);
+});
