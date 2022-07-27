@@ -20,9 +20,6 @@
     function closeNav() {
     document.getElementById(".menu").style.width = "0";
     }
-    
-    
-
 }
 )();
 
