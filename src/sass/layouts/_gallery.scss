@@ -1,0 +1,118 @@
+.gallery {
+  padding-bottom: 40px;
+  background: linear-gradient($secondaryBgColor 25%, $whiteColor 25%);
+  @media screen and (max-width: 767px) {
+    padding-bottom: 81px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding-bottom: 83px;
+  }
+}
+
+.gallery__image {
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+  margin: 0;
+  transition-property: transform;
+  transition-duration: 300ms;
+  transition-timing-function: linear;
+  transition-delay: 0ms;
+  &--big {
+    max-width: 140px;
+    @media screen and (min-width: 480px) {
+      max-width: 200px;
+    }
+    @media screen and (min-width: 1280px) {
+      max-width: 340px;
+    }
+
+    &:hover,
+    &:focus {
+      transform: scale(1.25);
+    }
+  }
+  &--small {
+    max-width: 65px;
+    @media screen and (min-width: 768px) {
+      max-width: 100px;
+    }
+    @media screen and (min-width: 1280px) {
+      max-width: 170px;
+    }
+
+    &:hover,
+    &:focus {
+      transform: scale(2);
+    }
+  }
+  &--left {
+    &:hover,
+    &:focus {
+      transform: scale(2) translate(60px);
+    }
+  }
+  &--right {
+    &:hover,
+    &:focus {
+      transform: scale(2) translate(-60px);
+    }
+  }
+}
+
+.gallery__container {
+  display: flex;
+  justify-content: center;
+  padding: 0 15px;
+}
+
+.gallery__wrapper {
+  &--small {
+    width: 50%;
+    @media screen and (max-width: 767px) {
+      max-width: 100px;
+    }
+    @media screen and (min-width: 1280px) {
+      max-width: 170px;
+    }
+  }
+  &--big {
+    max-width: 140px;
+    @media screen and (min-width: 768px) {
+      max-width: 100%;
+    }
+  }
+  &--upper {
+    margin-bottom: 2px;
+  }
+}
+
+.gallery__column {
+  width: 100%;
+  &:not(:last-child) {
+    margin-right: 2px;
+  }
+  &--first {
+    padding-top: 10%;
+    width: 50%;
+  }
+  &--second {
+    padding-top: 5%;
+    width: 50%;
+  }
+  // &--third {
+  //   width: 140px;
+  // }
+  &--fourth {
+    padding-top: 7%;
+    width: 50%;
+  }
+  &--fifth {
+    padding-top: 2%;
+    width: 50%;
+  }
+  &--sixth {
+    padding-top: 11%;
+    width: 50%;
+  }
+}
