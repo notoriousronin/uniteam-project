@@ -1,11 +1,14 @@
 .gallery {
-  padding-bottom: 40px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   background: linear-gradient($secondaryBgColor 25%, $whiteColor 25%);
-  @media screen and (max-width: 767px) {
-    padding-bottom: 81px;
+  @media screen and (min-width: 768px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
-  @media screen and (min-width: 1280px) {
-    padding-bottom: 83px;
+  @media screen and (min-width: 1200px) {
+    padding-right: 93px;
+    padding-left: 93px;
   }
 }
 
@@ -13,7 +16,7 @@
   display: block;
   width: 100%;
   border-radius: 10px;
-  margin: 0;
+  margin: 1.25px;
   transition-property: transform;
   transition-duration: 300ms;
   transition-timing-function: linear;
@@ -22,9 +25,11 @@
     max-width: 140px;
     @media screen and (min-width: 480px) {
       max-width: 200px;
+      margin: 6px;
     }
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: 1200px) {
       max-width: 340px;
+      margin: 8px;
     }
 
     &:hover,
@@ -36,9 +41,11 @@
     max-width: 65px;
     @media screen and (min-width: 768px) {
       max-width: 100px;
+      margin-bottom: 6px;
     }
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: 1200px) {
       max-width: 170px;
+      margin-bottom: 8px;
     }
 
     &:hover,
@@ -63,7 +70,7 @@
 .gallery__container {
   display: flex;
   justify-content: center;
-  padding: 0 15px;
+  padding: 0;
 }
 
 .gallery__wrapper {
@@ -72,7 +79,7 @@
     @media screen and (max-width: 767px) {
       max-width: 100px;
     }
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: 1200px) {
       max-width: 170px;
     }
   }
@@ -91,6 +98,9 @@
   width: 100%;
   &:not(:last-child) {
     margin-right: 2px;
+    @media screen and (min-width: 768px) {
+      margin-right: 6px;
+    }
   }
   &--first {
     padding-top: 10%;
@@ -100,9 +110,7 @@
     padding-top: 5%;
     width: 50%;
   }
-  // &--third {
-  //   width: 140px;
-  // }
+
   &--fourth {
     padding-top: 7%;
     width: 50%;
