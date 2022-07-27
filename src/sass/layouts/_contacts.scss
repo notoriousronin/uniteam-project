@@ -76,7 +76,6 @@
 
   &-cafe {
     width: 80px;
-    // height: 16px;
     margin-bottom: 20px;
     background: #f0d1a5;
     border-radius: 4px;
@@ -135,22 +134,6 @@
   border-bottom: 1px solid #e1e1e1;
 }
 
-.contacts__weekdays {
-  // &::before {
-  //   margin-top: 24px;
-  //   margin-bottom: 24px;
-  //   display: block;
-  //   content: '';
-  //   height: 0px;
-  //   border: 1px solid #e1e1e1;
-
-  //   @media screen and (min-width: 768px) {
-  //     margin-top: 32px;
-  //     margin-bottom: 32px;
-  //   }
-  // }
-}
-
 .contacts__days {
   color: #000000;
 }
@@ -160,20 +143,6 @@
 
 .contacts__weekend {
   margin-top: 8px;
-
-  // &::after {
-  //   margin-top: 24px;
-  //   margin-bottom: 24px;
-  //   display: block;
-  //   content: '';
-  //   height: 0px;
-  //   border: 1px solid #e1e1e1;
-
-  //   @media screen and (min-width: 768px) {
-  //     margin-top: 32px;
-  //     margin-bottom: 32px;
-  //   }
-  // }
 }
 
 .contacts__get-in-touch {
