@@ -3,7 +3,7 @@
     width: 100%;
     padding-top: 8px;
     padding-bottom: 34px;
-    z-index: 4;
+    z-index: 20;
     background-color: transparent;
     position: absolute;
     display: flex;
@@ -71,6 +71,9 @@
   border-radius: 22px;
   border: none;
 
+  animation: pulsate 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+
+
   @media screen and (min-width: 768px) {
     display: flex;
     align-items: baseline;
@@ -88,17 +91,31 @@
     height: 10px;
     margin-left: 12px;
   }
-  // @keyframes buy-btn {
-  //     0% {
-  //         box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
-  //     }
-  //     70% {
-  //         box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
-  //     }
-  //     100% {
-  //         box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
-  //     }
-  // }
+@keyframes pulsate {
+  0% {
+    transform: scale(0.95);
+  }
+
+  5% {
+    transform: scale(1.1);
+  }
+
+  39% {
+    transform: scale(0.85);
+  }
+
+  45% {
+    transform: scale(1);
+  }
+
+  60% {
+    transform: scale(0.95);
+  }
+
+  100% {
+    transform: scale(0.9);
+  }
+}
 }
 
 .menu-btn__open {
@@ -146,12 +163,7 @@
 }
 
 // nav-menu
-.is-hidden {
-  opacity: 0;
-  transform: translateX(100%);
-  overflow-x: hidden;
-  pointer-events: none;
-}
+
 
 .no-scroll {
   overflow-x: hidden;
@@ -159,16 +171,23 @@
 
 .menu {
   position: fixed;
-  z-index: 15;
+  z-index: 21;
   top: 0;
   left: 0;
   overflow-x: hidden;
-
+  opacity: 1;
   transition: 250ms;
   width: 100vw;
   height: 100vh;
   padding: 20px;
   background-color: #e17992;
+
+  &.is-hidden {
+      opacity: 0;
+      transform: translateX(100%);
+      overflow-x: hidden;
+      pointer-events: none;
+    }
 
   &-btn__close {
     width: 14px;
@@ -253,4 +272,200 @@
   width: 6px;
   height: 10px;
   margin-left: 12px;
+}
+
+/* Стили для модального окна */
+
+.buy-menu {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  transform: translatex(-50%);
+  background-color: #e17992;
+
+  opacity: 1;
+  visibility: visible;
+  pointer-events: initial;
+
+  background: rgba(0, 0, 0, 0.2);
+  transition: opacity var(--anim), visibility var(--anim);
+
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+.modal {
+  &__wraper {
+    position: absolute;
+    width: 300px;
+    height: 100vh;
+    padding: 25px;
+    top: 50%;
+    left: 50%;
+    background-color: #e17992;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+
+    @media screen and (min-width: 768px) {
+          width: 450px;
+          height: 600px;
+        padding: 25px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 528px;
+    }
+  }
+
+&--btn {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  top: 8px;
+  right: 8px;
+  border-radius: 50%;
+  background: var(--secondary-txt);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+  &--icon {
+    width: 18px;
+    height: 18px;
+
+    &:hover,
+    &:focus {
+      fill: #d41443;
+    }
+  }
+
+  &--title {
+    display: block;
+    margin-bottom: 12px;
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    @media screen and (min-width: 1200px) {
+      font-size: 20px;
+      line-height: 1.15;
+    }
+
+    color: #212121;
+  }
+
+  &--svg {
+    position: absolute;
+    top: 31px;
+    left: 15px;
+    transform: translateY(40%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.form--input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.form--label {
+  margin-bottom: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.31;
+  color: #212121;
+}
+
+.form--textarea {
+  width: 100%;
+  resize: none;
+  padding: 12px 16px;
+  outline: transparent;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 0, 85px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 20px;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: rgba(117, 117, 117, 0.5);
+
+  &:hover,
+  &:focus,
+  &:not(:placeholder-shown) {
+    border: 1px solid #d41443;
+    border-radius: 4px;
+  }
+
+  &:focus::placeholder {
+    font-size: 14px;
+    line-height: 0, 88px;
+  }
+}
+
+.input {
+  width: 100%;
+  height: 100%;
+  padding: 12px 40px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 20px;
+  outline: transparent;
+  cursor: pointer;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    border: 1px solid #d41443;
+    border-radius: 4px;
+  }
+
+  &:focus+.modal--svg,
+  &:hover+.modal--svg {
+    fill: #d41443;
+  }
+}
+.modal--submint__btn {
+  width: 200px;
+  height: 50px;
+  padding: 10px 32px;
+  display: block;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.31;
+  border: none;
+  background-color: #ffffff;
+  cursor: pointer;
+  color: #d41443;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+&:hover,
+&:focus{
+  background-color: #ecebeb;
+}
+
 }
