@@ -3,17 +3,15 @@
 }
 
 .advantages__container {
-  padding-left: 20px;
   padding-top: 106px;
   padding-bottom: 60px;
   @media screen and (min-width: 768px) {
     display: flex;
-    padding-left: 32px;
+
     padding-top: 146px;
   }
 
   @media screen and (min-width: 1200px) {
-    padding-left: 16px;
     padding-top: 130px;
   }
 }

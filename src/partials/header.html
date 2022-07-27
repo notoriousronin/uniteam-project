@@ -1,46 +1,50 @@
 <!-- header -->
 <header class="header">
-    <div class="container header__container">
-        <a class="header-logo__link" href="">
-            <svg class="header-logo" width="199">
-                <use class="logo-icon" href="./images/icons.svg#logo"></use>
-            </svg>
-        </a>
-        <nav class="header__nav">
-            <ul class="header-nav__list">
-                <li class="nav__item">
-                    <a class="header__link" href="#hero.html">Home</a>
-                </li>
-                <li class="nav__item">
-                    <a class="header__link" href="#about.html">About us</a>
-                </li>
-                <li class="nav__item">
-                    <a class="header__link" href="#advantages.html">How it’s made?</a>
-                </li>
-                <li class="nav__item">
-                    <a class="header__link" href="#products.html">Our products</a>
-                </li>
-                <li class="nav__item">
-                    <a class="header__link" href="#contacts.html">Contact</a>
-                </li>
-            </ul>
-        </nav>
-        <div class="header-btns">
-            <button class="menu-btn__open" type="button">
-                <svg class="menu-btn__icon-open" width="20">
-                    <use class="nav-btn__icon-open" href="./images/icons.svg#burger"></use>
-                </svg>
-            </button>
-            <button class="buy-btn" type="button">
-                Buy now
-                <svg class="buy-btn__icon" width="4">
-                    <use class="buy-btn__icon-open" href="./images/icons.svg#buy"></use>
-                </svg>
-            </button>
-        </div>
+  <div class="container header__container">
+    <a class="header-logo__link" href="">
+      <svg class="header-logo" width="199">
+        <use class="logo-icon" href="./images/icons.svg#logo"></use>
+      </svg>
+    </a>
+    <nav class="header__nav">
+      <ul class="header-nav__list">
+        <li class="nav__item">
+          <a class="header__link" href="#hero">Home</a>
+        </li>
+        <li class="nav__item">
+          <a class="header__link" href="#footer">About us</a>
+        </li>
+        <li class="nav__item">
+          <a class="header__link" href="#about">How it’s made?</a>
+        </li>
+        <li class="nav__item">
+          <a class="header__link" href="#products">Our products</a>
+        </li>
+        <li class="nav__item">
+          <a class="header__link" href="#contacts">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="header-btns">
+      <button class="menu-btn__open" type="button">
+        <svg class="menu-btn__icon-open" width="20">
+          <use
+            class="nav-btn__icon-open"
+            href="./images/icons.svg#burger"
+          ></use>
+        </svg>
+      </button>
+      <button class="buy-btn" type="button">
+        Buy now
+        <svg class="buy-btn__icon" width="4">
+          <use class="buy-btn__icon-open" href="./images/icons.svg#buy"></use>
+        </svg>
+      </button>
     </div>
+  </div>
 </header>
 <!-- nav-menu -->
+
     <div class="menu is-hidden">
             <button class="menu-btn__close" type="button">
                 <svg class="menu-btn__icon-close" width="14">
@@ -57,25 +61,66 @@
             <nav class="menu-nav">
                 <ul class="menu-nav__list">
                     <li class="menu-nav__item">
-                        <a class="menu__link" href="#hero.html">Home</a>
+                        <a class="menu__link" href="#hero">Home</a>
                     </li>
                     <li class="menu-nav__item">
-                        <a class="menu__link" href="#about.html">About us</a>
+                        <a class="menu__link" href="#footer">About us</a>
                     </li>
                     <li class="menu-nav__item">
-                        <a class="menu__link" href="#advantages.html">How it’s made?</a>
+                        <a class="menu__link" href="#about">How it’s made?</a>
                     </li>
                     <li class="menu-nav__item">
-                        <a class="menu__link" href="#products.html">Our products</a>
+                        <a class="menu__link" href="#products">Our products</a>
                     </li>
                     <li class="menu-nav__item">
-                        <a class="menu__link" href="#contacts.html">Contact</a>
+                        <a class="menu__link" href="#contacts">Contact</a>
                     </li>
                 </ul>
             </nav>
         </div>
     </div>
-    <a class="scroll-btn" href="./index.html">
+    <a class="scroll-btn" href="#hero">
         Up
     </a>
 
+<!-- Модальное окно -->
+<div class="buy-menu is-hidden is-hiddenn">
+    <div class="modal__wraper">
+        <button class="modal--btn" type="button">
+            <svg class="modal--icon">
+                <use href="./images/icons.svg#close-black"></use>
+            </svg>
+        </button>
+        <strong class="modal--title">Leave your details, we will call you back</strong>
+        <form class="contacts__form">
+            <div class="form--input">
+                <label class="form--label">Name</label>
+                <input class="input" type="text" name="name" minlength="3">
+                <svg class="modal--svg" width="18" height="18">
+                    <use href="./images/icons.svg#person"></use>
+                </svg>
+            </div>
+            <div class="form--input">
+                <label class="form--label">Phone</label>
+                <input class="input" type="tel" name="tel">
+                <svg class="modal--svg" width="18" height="18">
+                    <use href="./images/icons.svg#phone"></use>
+                </svg>
+            </div>
+            <div class="form--input">
+                <label class="form--label">Mail</label>
+                <input class="input" type="email" name="email">
+                <svg class="modal--svg" width="18" height="18">
+                    <use href="./images/icons.svg#email"></use>
+                </svg>
+            </div>
+
+            <div class="form--input">
+                <label class="form--label">Comment</label>
+                <textarea class="form--textarea" name="message" cols="30" rows="8"
+                    placeholder="Enter text"></textarea>
+            </div>
+            <button class="modal--submint__btn" type="send">Send</button>
+        </form>
+    </div>
+</div>

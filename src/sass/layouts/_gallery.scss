@@ -1,0 +1,126 @@
+.gallery {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background: linear-gradient($secondaryBgColor 25%, $whiteColor 25%);
+  @media screen and (min-width: 768px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-right: 93px;
+    padding-left: 93px;
+  }
+}
+
+.gallery__image {
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+  margin: 1.25px;
+  transition-property: transform;
+  transition-duration: 300ms;
+  transition-timing-function: linear;
+  transition-delay: 0ms;
+  &--big {
+    max-width: 140px;
+    @media screen and (min-width: 480px) {
+      max-width: 200px;
+      margin: 6px;
+    }
+    @media screen and (min-width: 1200px) {
+      max-width: 340px;
+      margin: 8px;
+    }
+
+    &:hover,
+    &:focus {
+      transform: scale(1.25);
+    }
+  }
+  &--small {
+    max-width: 65px;
+    @media screen and (min-width: 768px) {
+      max-width: 100px;
+      margin-bottom: 6px;
+    }
+    @media screen and (min-width: 1200px) {
+      max-width: 170px;
+      margin-bottom: 8px;
+    }
+
+    &:hover,
+    &:focus {
+      transform: scale(2);
+    }
+  }
+  &--left {
+    &:hover,
+    &:focus {
+      transform: scale(2) translate(60px);
+    }
+  }
+  &--right {
+    &:hover,
+    &:focus {
+      transform: scale(2) translate(-60px);
+    }
+  }
+}
+
+.gallery__container {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.gallery__wrapper {
+  &--small {
+    width: 50%;
+    @media screen and (max-width: 767px) {
+      max-width: 100px;
+    }
+    @media screen and (min-width: 1200px) {
+      max-width: 170px;
+    }
+  }
+  &--big {
+    max-width: 140px;
+    @media screen and (min-width: 768px) {
+      max-width: 100%;
+    }
+  }
+  &--upper {
+    margin-bottom: 2px;
+  }
+}
+
+.gallery__column {
+  width: 100%;
+  &:not(:last-child) {
+    margin-right: 2px;
+    @media screen and (min-width: 768px) {
+      margin-right: 6px;
+    }
+  }
+  &--first {
+    padding-top: 10%;
+    width: 50%;
+  }
+  &--second {
+    padding-top: 5%;
+    width: 50%;
+  }
+
+  &--fourth {
+    padding-top: 7%;
+    width: 50%;
+  }
+  &--fifth {
+    padding-top: 2%;
+    width: 50%;
+  }
+  &--sixth {
+    padding-top: 11%;
+    width: 50%;
+  }
+}
