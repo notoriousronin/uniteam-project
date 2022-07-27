@@ -3,6 +3,15 @@ img {
   max-width: 100%;
   padding-left: 20px;
   padding-right: 20px;
+
+  @media screen and (min-width: 768px) {
+    width: 335px;
+    height: 335px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 501px;
+    height: 501px;
+  }
 }
 
 .about {
@@ -79,9 +88,17 @@ img {
     font-size: 58px;
   }
 }
+.about__info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  @media screen and (max-width: 767px) {
+    display: inline;
+  }
+}
 
 .about__full-title {
-  padding: 40px 80px 40px 20px;
   font-family: 'DM Sans';
   font-weight: 500;
   font-size: 16px;
@@ -91,8 +108,9 @@ img {
   @media screen and (min-width: 320px) {
     font-size: 12px;
     line-height: 1, 58;
+    padding: 40px 80px 40px 20px;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (min-width: 767px) {
     font-size: 14px;
     line-height: 1, 79;
   }
@@ -119,31 +137,43 @@ img {
 }
 
 .about__button {
-  display: block;
-
-  padding: 15px 56px 15px 37px;
-
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 14px 10px 30px;
   margin-left: 20px;
   margin-top: 20px;
-  margin-bottom: 20px;
+
   background: #ffffff;
   border-radius: 22px;
   border: none;
-
-  font-family: 'DM Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 18px;
-
-  align-items: center;
-  text-align: center;
   cursor: pointer;
 
+  font-family: 'DM Sans';
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1, 29;
+  width: 176px;
+  height: 44px;
   color: #d41443;
 }
 
 .about__icon {
   align-self: center;
-  margin-bottom: 14px;
+  margin-left: 14px;
+}
+.about__text-info {
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+}
+.about__text-milk {
+  @media screen and (min-width: 768px) {
+    width: 334px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 463px;
+  }
 }
