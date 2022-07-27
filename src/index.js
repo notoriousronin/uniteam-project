@@ -23,6 +23,24 @@
 }
 )();
 
+(() => {
+  const refs = {
+    openModalBtn: document.querySelector(".buy-btn"),
+
+    closeModalBtn: document.querySelector(".modal--btn"),
+    modal: document.querySelector(".buy-menu"),
+  };
+
+  refs.openModalBtn.addEventListener("click", toggleModal);
+  refs.closeModalBtn.addEventListener("click", toggleModal);
+
+  function toggleModal() {
+    refs.modal.classList.toggle("is-hidden");
+  }
+})();
+
+
+
 // window.onscroll = function() {scrollFunction()};
 
 // function scrollFunction() {
