@@ -1,149 +1,209 @@
 img {
   display: block;
-  max-width: 100%;
-  padding-left: 20px;
-  padding-right: 20px;
+  width: 100%;
+  margin-bottom: 40px;
+
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 1200px) {
+  }
 }
 
 .about {
-  background-color: #fff5f6;
-  // padding: 20px;
-}
+  position: relative;
 
-.overlay {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
   background-image: url(../images/about/about-milk-mob.png);
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-.about__container {
-  padding: 0;
-  margin: 0 auto;
+  background-position: 0 78%;
 
-  // outline: 2px solid red;
-  // outline-offset: -2px;
+  background-color: #fff5f6;
 
-  @media screen and (min-width: 480px) {
-    max-width: 480px;
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/about/about-milk-mob-2x.png);
   }
 
   @media screen and (min-width: 768px) {
-    max-width: 768px;
+    background-image: url(../images/about/about-milk-desk.png);
+    background-position: 0 85%;
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/about/about-milk-desk-2x.png);
+    }
   }
+
   @media screen and (min-width: 1200px) {
-    max-width: 1200px;
+    background-image: url(../images/about/about-milk-desk.png);
+    background-position: center 110%;
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/about/about-milk-desk-2x.png);
+    }
   }
 }
+
 .about__text {
-  padding: 60px 64px 15px 54px;
   font-family: 'Titan One';
   font-weight: 400;
-  font-size: 30px;
-  line-height: 1, 17;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 1.17;
   text-align: center;
   text-transform: uppercase;
+  margin-bottom: 15px;
 
   color: #ffa5ba;
 
-  @media screen and (min-width: 320px) {
-    font-size: 18px;
+  @media screen and (max-width: 320px) {
+    font-size: 16px;
   }
+
   @media screen and (min-width: 768px) {
-    font-size: 26px;
+    font-size: 25px;
+    line-height: 1.15;
+    letter-spacing: 0.04em;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 30px;
+    line-height: 1.13;
   }
 }
 
 .about__title {
-  margin-left: 60px;
-  margin-right: 60px;
+  margin-bottom: 32px;
+
   font-family: 'Titan One';
   font-weight: 400;
-  font-size: 58px;
-  line-height: 1, 15;
+  font-style: normal;
+  font-size: 34px;
+  line-height: 1.15;
+
   text-align: center;
   letter-spacing: 0.04em;
   text-transform: uppercase;
 
   color: #d41443;
 
-  @media screen and (min-width: 320px) {
-    font-size: 34px;
+  @media screen and (max-width: 320px) {
+    font-size: 26px;
   }
+
   @media screen and (min-width: 768px) {
+    margin-bottom: 40px;
     font-size: 48px;
+    letter-spacing: 0.06em;
   }
+
   @media screen and (min-width: 1200px) {
     font-size: 58px;
+    margin-bottom: 80px;
+    line-height: 1.14;
+  }
+}
+
+.about__info {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media screen and (min-width: 1200px) {
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
 .about__full-title {
-  padding: 40px 80px 40px 20px;
   font-family: 'DM Sans';
+  font-style: normal;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 162%;
+  font-size: 12px;
+  line-height: 1.6;
   color: #000000;
+  max-width: 220px;
+  margin-bottom: 40px;
 
-  @media screen and (min-width: 320px) {
-    font-size: 12px;
-    line-height: 1, 58;
-  }
-  @media screen and (max-width: 768px) {
+  @media screen and (min-width: 768px) {
     font-size: 14px;
-    line-height: 1, 79;
+    max-width: 334px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+    line-height: 1.75;
+    min-width: 463px;
   }
 }
 
 .about__paragraph {
-  padding-left: 20px;
-  padding-right: 80px;
   font-family: 'DM Sans';
-
+  font-style: normal;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 162%;
-
+  font-size: 12px;
+  line-height: 1.6;
+  max-width: 220px;
+  margin-bottom: 20px;
   color: #907e82;
-  @media screen and (min-width: 320px) {
-    font-size: 12px;
-    line-height: 1, 58;
-  }
-  @media screen and (max-width: 768px) {
+
+  @media screen and (min-width: 768px) {
     font-size: 14px;
-    line-height: 1, 79;
+    max-width: 334px;
+    margin-bottom: 40px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+    line-height: 1.75;
+    min-width: 463px;
   }
 }
 
 .about__button {
-  display: block;
-
-  padding: 15px 56px 15px 37px;
-
-  margin-left: 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  background: #ffffff;
-  border-radius: 22px;
-  border: none;
+  display: inline-flex;
 
   font-family: 'DM Sans';
-  font-style: normal;
   font-weight: 700;
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 16px;
+  line-height: 1.3;
+
+  background: #ffffff;
+  color: #d41443;
+  border: transparent;
+
+  border-radius: 22px;
+  min-width: 176px;
+  min-height: 44px;
 
   align-items: center;
-  text-align: center;
+  justify-content: center;
+
   cursor: pointer;
 
-  color: #d41443;
+  &:hover,
+  &:focus {
+    background-color: #ecebeb;
+    box-shadow: 2px 2px 10px 2px #d87991;
+  }
 }
 
 .about__icon {
-  align-self: center;
-  margin-bottom: 14px;
+  margin-left: 14px;
+}
+
+.about__text-info {
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+}
+
+.about__text-milk {
+  @media screen and (min-width: 768px) {
+    width: 334px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 463px;
+    margin-right: 99px;
+  }
 }
