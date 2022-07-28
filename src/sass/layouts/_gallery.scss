@@ -21,6 +21,7 @@
   transition-duration: 300ms;
   transition-timing-function: linear;
   transition-delay: 0ms;
+  cursor: pointer;
   &--big {
     max-width: 140px;
     @media screen and (min-width: 480px) {
