@@ -40,19 +40,46 @@
 })();
 
 
+const sttElem = document.querySelector('.scroll-btn');
+const screanHeight = window.innerHeight;
 
-// window.onscroll = function() {scrollFunction()};
+const sttScroll = () => {
+  document.addEventListener('scroll', (e) => {
+    if (screanHeight <= window.scrollY) {
+      sttElem.classList.add('scroll-btn__active');
+    } else if (e.target.scrollingElement.scrollTop <= screanHeight) {
+      sttElem.classList.remove('scroll-btn__active');
+      sttElem.style.pointerEvents = 'auto';
+    }
+  });
+};
 
-// function scrollFunction() {
-//     if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
-//         document.getElementById(".scroll-btn").style.display = block;
-//     } else {
-//         document.getElementById(".scroll-btn").style.display = none;
-//     }
-// }
+// Кнопка вверх
 
-// // When the user clicks on the button, scroll to the top of the document
-// function topFunction() {
-//     document.body.scrollTop = 0; // For Safari
-//     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-// }
+const sttClick = () => {
+  sttElem.addEventListener('click', () => {
+    const docHeight = window.scrollY;
+    let progress = 0;
+    let position = docHeight;
+    const speed = 5;
+
+    sttElem.style.pointerEvents = 'none';
+
+    const sttAnim = () => {
+      progress += 1;
+      position -= progress * speed;
+      window.scrollTo(0, position);
+      if (position > 0) {
+        requestAnimationFrame(sttAnim);
+      } 
+    };
+    requestAnimationFrame(sttAnim);
+  });
+};
+
+const sttFunc = () => {
+  sttScroll();
+  sttClick();
+};
+
+document.addEventListener('DOMContentLoaded', sttFunc);
