@@ -26,19 +26,41 @@
 (() => {
   const refs = {
     openModalBtn: document.querySelector(".buy-btn"),
-
+    openMobModalBtn: document.querySelector(".menu-buy-btn"),
     closeModalBtn: document.querySelector(".modal--btn"),
     modal: document.querySelector(".buy-menu"),
   };
-
   refs.openModalBtn.addEventListener("click", toggleModal);
   refs.closeModalBtn.addEventListener("click", toggleModal);
-
+  refs.openMobModalBtn.addEventListener("click", toggleModal);
   function toggleModal() {
     refs.modal.classList.toggle("is-hidden");
   }
 })();
 
+
+// (() => {
+//   const refs = {
+//     openModalBtn: document.querySelector(".buy-menu"),
+
+//     openMobModalBtn: document.querySelector(".menu-buy-btn"),
+    
+//     closeModalBtn: document.querySelector(".modal--btn"),
+//     modal: document.querySelector(".buy-menu"),
+//   };
+
+//   refs.openModalBtn.addEventListener("click", toggleModal);
+//   refs.closeModalBtn.addEventListener("click", toggleModal);
+  
+//   refs.openMobModalBtn.addEventListener("click", toggleModal);
+
+//   function toggleModal() {
+//     refs.modal.classList.toggle("is-hidden");
+//   }
+// })();
+
+
+// Кнопка вверх
 
 const sttElem = document.querySelector('.scroll-btn');
 const screanHeight = window.innerHeight;
@@ -54,7 +76,7 @@ const sttScroll = () => {
   });
 };
 
-// Кнопка вверх
+
 
 const sttClick = () => {
   sttElem.addEventListener('click', () => {
