@@ -1,14 +1,12 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
 
 .container {
-  max-width: 100%;
-  display: block;
   margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (min-width: 480px) {
     width: 480px;
-    padding-left: 20px;
-    padding-right: 20px;
   }
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
