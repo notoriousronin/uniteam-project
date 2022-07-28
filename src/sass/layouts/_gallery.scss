@@ -26,11 +26,11 @@
     max-width: 140px;
     @media screen and (min-width: 480px) {
       max-width: 200px;
-      margin: 6px;
+      margin-bottom: 6px;
     }
     @media screen and (min-width: 1200px) {
       max-width: 340px;
-      margin: 8px;
+      margin-bottom: 8px;
     }
 
     &:hover,
