@@ -40,19 +40,46 @@
 })();
 
 
+const sttElem = document.querySelector('.scroll-btn');
+const screanHeight = window.innerHeight;
 
+const sttScroll = () => {
+  document.addEventListener('scroll', (e) => {
+    if (screanHeight <= window.scrollY) {
+      sttElem.classList.add('scroll-btn__active');
+    } else if (e.target.scrollingElement.scrollTop <= screanHeight) {
+      sttElem.classList.remove('scroll-btn__active');
+      sttElem.style.pointerEvents = 'auto';
+    }
+  });
+};
 
+// Кнопка вверх
 
-$(document).scroll(function() {
-  let scrolled = $(window).scrollTop();
-  
-  if(scrolled > 350) {
-    $('.scroll-btn').addClass('active');
-  } else {
-    $('.scroll-btn').removeClass('active');
-  }
-});
+const sttClick = () => {
+  sttElem.addEventListener('click', () => {
+    const docHeight = window.scrollY;
+    let progress = 0;
+    let position = docHeight;
+    const speed = 5;
 
-$('.scroll-btn').click(function() {
-    $('body,html').animate({ scrollTop: 0}, 800);
-});
+    sttElem.style.pointerEvents = 'none';
+
+    const sttAnim = () => {
+      progress += 1;
+      position -= progress * speed;
+      window.scrollTo(0, position);
+      if (position > 0) {
+        requestAnimationFrame(sttAnim);
+      } 
+    };
+    requestAnimationFrame(sttAnim);
+  });
+};
+
+const sttFunc = () => {
+  sttScroll();
+  sttClick();
+};
+
+document.addEventListener('DOMContentLoaded', sttFunc);
